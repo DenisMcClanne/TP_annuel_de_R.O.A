@@ -24,15 +24,13 @@ for i, row in df_universites.iterrows():
     
 
 def gale_shapley(preferences_etudiants, preferences_universites):
+    
     # Initialisation de tous les étudiants comme libres
     etudiants_libres = list(preferences_etudiants.keys())
-    
     # Dictionnaire pour garder l’université assignée à chaque étudiant
     appariements = {}
-    
     # Dictionnaire pour garder l’étudiant assigné à chaque université
     universite_partenaire = {}
-
     # Pour suivre à qui chaque étudiant a déjà proposé
     propositions_faites = {etudiant: [] for etudiant in preferences_etudiants}
 
